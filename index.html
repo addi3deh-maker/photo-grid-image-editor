@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Grid Image Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>📸 Photo Grid Image Editor</h1>
+    <p>Upload images, apply filters, download your grid.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label class="upload-btn">
+        + Add Images
+        <input type="file" id="fileInput" accept="image/*" multiple hidden />
+      </label>
+
+      <label>Grid:
+        <select id="gridSize">
+          <option value="2">2 x 2</option>
+          <option value="3" selected>3 x 3</option>
+          <option value="4">4 x 4</option>
+        </select>
+      </label>
+
+      <label>Filter:
+        <select id="filter">
+          <option value="none">None</option>
+          <option value="grayscale">Grayscale</option>
+          <option value="sepia">Sepia</option>
+          <option value="invert">Invert</option>
+          <option value="bright">Brighten</option>
+        </select>
+      </label>
+
+      <button id="applyBtn">Apply Filter</button>
+      <button id="downloadBtn">Download PNG</button>
+      <button id="clearBtn">Clear</button>
+    </section>
+
+    <section class="preview">
+      <canvas id="gridCanvas" width="900" height="900"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

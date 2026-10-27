@@ -1,0 +1,99 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px 30px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+header h1 { margin: 0; font-size: 22px; }
+header p  { margin: 4px 0 0; color: #94a3b8; font-size: 14px; }
+
+main {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #1e293b;
+  padding: 18px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.controls select,
+.upload-btn {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.upload-btn {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+button:hover { background: #475569; }
+
+#applyBtn    { background: #10b981; }
+#applyBtn:hover    { background: #059669; }
+#downloadBtn { background: #8b5cf6; }
+#downloadBtn:hover { background: #7c3aed; }
+#clearBtn    { background: #ef4444; }
+#clearBtn:hover    { background: #dc2626; }
+
+.preview {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  background: #0f172a;
+  border-radius: 8px;
+}
